@@ -1,0 +1,308 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|ARM">
+      <Configuration>Debug</Configuration>
+      <Platform>ARM</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|ARM">
+      <Configuration>Release</Configuration>
+      <Platform>ARM</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|ARM64">
+      <Configuration>Debug</Configuration>
+      <Platform>ARM64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|ARM64">
+      <Configuration>Release</Configuration>
+      <Platform>ARM64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x86">
+      <Configuration>Debug</Configuration>
+      <Platform>x86</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x86">
+      <Configuration>Release</Configuration>
+      <Platform>x86</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\Abstract\Binary_Abstract.cpp" />
+    <ClCompile Include="src\Abstract\EnumToString_Abstract.cpp" />
+    <ClCompile Include="src\Abstract\hash_Abstract.cpp" />
+    <ClCompile Include="src\Abstract\Header_Abstract.cpp" />
+    <ClCompile Include="src\Abstract\Parser_Abstract.cpp" />
+    <ClCompile Include="src\Abstract\Relocation_Abstract.cpp" />
+    <ClCompile Include="src\Abstract\Section_Abstract.cpp" />
+    <ClCompile Include="src\Abstract\Symbol_Abstract.cpp" />
+    <ClCompile Include="src\BinaryStream\BinaryStream.cpp" />
+    <ClCompile Include="src\BinaryStream\VectorStream.cpp" />
+    <ClCompile Include="src\ELF\AndroidNote.cpp" />
+    <ClCompile Include="src\ELF\Binary_ELF.cpp" />
+    <ClCompile Include="src\ELF\Builder.cpp" />
+    <ClCompile Include="src\ELF\DataHandler\Handler.cpp" />
+    <ClCompile Include="src\ELF\DataHandler\Node.cpp" />
+    <ClCompile Include="src\ELF\DynamicEntry.cpp" />
+    <ClCompile Include="src\ELF\DynamicEntryArray.cpp" />
+    <ClCompile Include="src\ELF\DynamicEntryFlags.cpp" />
+    <ClCompile Include="src\ELF\DynamicEntryLibrary.cpp" />
+    <ClCompile Include="src\ELF\DynamicEntryRpath.cpp" />
+    <ClCompile Include="src\ELF\DynamicEntryRunPath.cpp" />
+    <ClCompile Include="src\ELF\DynamicSharedObject.cpp" />
+    <ClCompile Include="src\ELF\EnumToString_ELF.cpp" />
+    <ClCompile Include="src\ELF\GnuHash.cpp" />
+    <ClCompile Include="src\ELF\hash_ELF.cpp" />
+    <ClCompile Include="src\ELF\Header_ELF.cpp" />
+    <ClCompile Include="src\ELF\Note.cpp" />
+    <ClCompile Include="src\ELF\Parser_ELF.cpp" />
+    <ClCompile Include="src\ELF\Relocation_ELF.cpp" />
+    <ClCompile Include="src\ELF\Section_ELF.cpp" />
+    <ClCompile Include="src\ELF\Segment.cpp" />
+    <ClCompile Include="src\ELF\Symbol_ELF.cpp" />
+    <ClCompile Include="src\ELF\SymbolVersion.cpp" />
+    <ClCompile Include="src\ELF\SymbolVersionAux.cpp" />
+    <ClCompile Include="src\ELF\SymbolVersionAuxRequirement.cpp" />
+    <ClCompile Include="src\ELF\SymbolVersionDefinition.cpp" />
+    <ClCompile Include="src\ELF\SymbolVersionRequirement.cpp" />
+    <ClCompile Include="src\ELF\SysvHash.cpp" />
+    <ClCompile Include="src\ELF\utils_ELF.cpp" />
+    <ClCompile Include="src\exception.cpp" />
+    <ClCompile Include="src\iostream.cpp" />
+    <ClCompile Include="src\logging.cpp" />
+    <ClCompile Include="src\mbedtls\sha256.c" />
+    <ClCompile Include="src\Object.cpp" />
+    <ClCompile Include="src\utils.cpp" />
+    <ClCompile Include="src\Visitor.cpp" />
+    <ClCompile Include="src\visitors\hash_visitors.cpp" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{12327aa2-c828-40a7-ac9c-e000d909608d}</ProjectGuid>
+    <Keyword>Android</Keyword>
+    <RootNamespace>LIEF</RootNamespace>
+    <MinimumVisualStudioVersion>15.0</MinimumVisualStudioVersion>
+    <ApplicationType>Android</ApplicationType>
+    <ApplicationTypeRevision>3.0</ApplicationTypeRevision>
+    <ProjectName>LIEF</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <UseOfStl>c++_static</UseOfStl>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <UseOfStl>c++_static</UseOfStl>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <AndroidAPILevel>android-21</AndroidAPILevel>
+    <UseOfStl>c++_static</UseOfStl>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <AndroidAPILevel>android-21</AndroidAPILevel>
+    <UseOfStl>c++_static</UseOfStl>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <UseOfStl>c++_static</UseOfStl>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <UseOfStl>c++_static</UseOfStl>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x86'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <AndroidAPILevel>android-21</AndroidAPILevel>
+    <UseOfStl>c++_static</UseOfStl>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x86'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <AndroidAPILevel>android-21</AndroidAPILevel>
+    <UseOfStl>c++_static</UseOfStl>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Label="Shared" />
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IncludePath>D:\AndroidNative\AndHook;$(ProjectDir)include\LIEF;$(ProjectDir)include\;$(ProjectDir)src;$(IncludePath)</IncludePath>
+    <UseMultiToolTask>true</UseMultiToolTask>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <IncludePath>D:\AndroidNative\AndHook;$(ProjectDir)include\LIEF;$(ProjectDir)include\;$(ProjectDir)src;$(IncludePath)</IncludePath>
+    <UseMultiToolTask>true</UseMultiToolTask>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x86'">
+    <IncludePath>D:\AndroidNative\AndHook;$(ProjectDir)include\LIEF;$(ProjectDir)include\;$(ProjectDir)src;$(IncludePath)</IncludePath>
+    <UseMultiToolTask>true</UseMultiToolTask>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x86'">
+    <IncludePath>D:\AndroidNative\AndHook;$(ProjectDir)include\LIEF;$(ProjectDir)include\;$(ProjectDir)src;$(IncludePath)</IncludePath>
+    <UseMultiToolTask>true</UseMultiToolTask>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">
+    <IncludePath>D:\AndroidNative\AndHook;$(ProjectDir)include\LIEF;$(ProjectDir)include\;$(ProjectDir)src;$(IncludePath)</IncludePath>
+    <UseMultiToolTask>true</UseMultiToolTask>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'">
+    <IncludePath>D:\AndroidNative\AndHook;$(ProjectDir)include\LIEF;$(ProjectDir)include\;$(ProjectDir)src;$(IncludePath)</IncludePath>
+    <UseMultiToolTask>true</UseMultiToolTask>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
+    <IncludePath>D:\AndroidNative\AndHook;$(ProjectDir)include\LIEF;$(ProjectDir)include\;$(ProjectDir)src;$(IncludePath)</IncludePath>
+    <UseMultiToolTask>true</UseMultiToolTask>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
+    <IncludePath>D:\AndroidNative\AndHook;$(ProjectDir)include\LIEF;$(ProjectDir)include\;$(ProjectDir)src;$(IncludePath)</IncludePath>
+    <UseMultiToolTask>true</UseMultiToolTask>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile />
+    <Link>
+      <AdditionalLibraryDirectories>$(OutDir);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <LibraryDependencies>m;$(StlLibraryName);%(LibraryDependencies)</LibraryDependencies>
+    </Link>
+    <ClCompile>
+      <AdditionalOptions>-fvisibility=hidden -fvisibility-inlines-hidden %(AdditionalOptions)</AdditionalOptions>
+      <CppLanguageStandard>c++11</CppLanguageStandard>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <ExceptionHandling>Enabled</ExceptionHandling>
+      <PreprocessorDefinitions>LIEF_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile />
+    <Link>
+      <AdditionalLibraryDirectories>$(OutDir);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <DebuggerSymbolInformation>OmitAllSymbolInformation</DebuggerSymbolInformation>
+      <LibraryDependencies>m;$(StlLibraryName);%(LibraryDependencies)</LibraryDependencies>
+    </Link>
+    <ClCompile>
+      <AdditionalOptions>-fvisibility=hidden -fvisibility-inlines-hidden %(AdditionalOptions)</AdditionalOptions>
+      <CppLanguageStandard>c++11</CppLanguageStandard>
+      <ExceptionHandling>Enabled</ExceptionHandling>
+      <PreprocessorDefinitions>LIEF_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <DebugInformationFormat>None</DebugInformationFormat>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x86'">
+    <ClCompile />
+    <Link>
+      <AdditionalLibraryDirectories>$(OutDir);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+    <ClCompile>
+      <AdditionalOptions>-fvisibility=hidden -fvisibility-inlines-hidden %(AdditionalOptions)</AdditionalOptions>
+      <CppLanguageStandard>c++11</CppLanguageStandard>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <ExceptionHandling>Enabled</ExceptionHandling>
+      <PreprocessorDefinitions>LIEF_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x86'">
+    <ClCompile />
+    <Link>
+      <AdditionalLibraryDirectories>$(OutDir);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <DebuggerSymbolInformation>OmitAllSymbolInformation</DebuggerSymbolInformation>
+    </Link>
+    <ClCompile>
+      <AdditionalOptions>-fvisibility=hidden -fvisibility-inlines-hidden %(AdditionalOptions)</AdditionalOptions>
+      <CppLanguageStandard>c++11</CppLanguageStandard>
+      <ExceptionHandling>Enabled</ExceptionHandling>
+      <PreprocessorDefinitions>LIEF_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <DebugInformationFormat>None</DebugInformationFormat>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+    </ClCompile>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">
+    <ClCompile />
+    <Link>
+      <AdditionalLibraryDirectories>$(OutDir);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <LibraryDependencies>m;$(StlLibraryName);%(LibraryDependencies)</LibraryDependencies>
+    </Link>
+    <ClCompile>
+      <AdditionalOptions>-fvisibility=hidden -fvisibility-inlines-hidden %(AdditionalOptions)</AdditionalOptions>
+      <CppLanguageStandard>c++11</CppLanguageStandard>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <ExceptionHandling>Enabled</ExceptionHandling>
+      <PreprocessorDefinitions>LIEF_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'">
+    <ClCompile />
+    <Link>
+      <AdditionalLibraryDirectories>$(OutDir);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <DebuggerSymbolInformation>OmitAllSymbolInformation</DebuggerSymbolInformation>
+      <LibraryDependencies>m;$(StlLibraryName);%(LibraryDependencies)</LibraryDependencies>
+    </Link>
+    <ClCompile>
+      <AdditionalOptions>-fvisibility=hidden -fvisibility-inlines-hidden %(AdditionalOptions)</AdditionalOptions>
+      <CppLanguageStandard>c++11</CppLanguageStandard>
+      <ExceptionHandling>Enabled</ExceptionHandling>
+      <PreprocessorDefinitions>LIEF_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <DebugInformationFormat>None</DebugInformationFormat>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
+    <ClCompile />
+    <Link>
+      <AdditionalLibraryDirectories>$(OutDir);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+    <ClCompile>
+      <AdditionalOptions>-fvisibility=hidden -fvisibility-inlines-hidden %(AdditionalOptions)</AdditionalOptions>
+      <CppLanguageStandard>c++11</CppLanguageStandard>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <ExceptionHandling>Enabled</ExceptionHandling>
+      <PreprocessorDefinitions>LIEF_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <PostBuildEvent />
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
+    <ClCompile />
+    <Link>
+      <AdditionalLibraryDirectories>$(OutDir);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <DebuggerSymbolInformation>OmitAllSymbolInformation</DebuggerSymbolInformation>
+    </Link>
+    <ClCompile>
+      <AdditionalOptions>-fvisibility=hidden -fvisibility-inlines-hidden %(AdditionalOptions)</AdditionalOptions>
+      <CppLanguageStandard>c++11</CppLanguageStandard>
+      <ExceptionHandling>Enabled</ExceptionHandling>
+      <PreprocessorDefinitions>LIEF_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <DebugInformationFormat>None</DebugInformationFormat>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+    </ClCompile>
+    <PostBuildEvent />
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets" />
+</Project>

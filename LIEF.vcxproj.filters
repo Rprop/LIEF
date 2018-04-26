@@ -1,0 +1,154 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="src\ELF\AndroidNote.cpp">
+      <Filter>ELF</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ELF\Builder.cpp">
+      <Filter>ELF</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ELF\DynamicEntry.cpp">
+      <Filter>ELF</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ELF\DynamicEntryArray.cpp">
+      <Filter>ELF</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ELF\DynamicEntryFlags.cpp">
+      <Filter>ELF</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ELF\DynamicEntryLibrary.cpp">
+      <Filter>ELF</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ELF\DynamicEntryRpath.cpp">
+      <Filter>ELF</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ELF\DynamicEntryRunPath.cpp">
+      <Filter>ELF</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ELF\DynamicSharedObject.cpp">
+      <Filter>ELF</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ELF\GnuHash.cpp">
+      <Filter>ELF</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ELF\Note.cpp">
+      <Filter>ELF</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ELF\Segment.cpp">
+      <Filter>ELF</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ELF\SymbolVersion.cpp">
+      <Filter>ELF</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ELF\SymbolVersionAux.cpp">
+      <Filter>ELF</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ELF\SymbolVersionAuxRequirement.cpp">
+      <Filter>ELF</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ELF\SymbolVersionDefinition.cpp">
+      <Filter>ELF</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ELF\SymbolVersionRequirement.cpp">
+      <Filter>ELF</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ELF\SysvHash.cpp">
+      <Filter>ELF</Filter>
+    </ClCompile>
+    <ClCompile Include="src\exception.cpp" />
+    <ClCompile Include="src\iostream.cpp" />
+    <ClCompile Include="src\logging.cpp" />
+    <ClCompile Include="src\Object.cpp" />
+    <ClCompile Include="src\utils.cpp" />
+    <ClCompile Include="src\Visitor.cpp" />
+    <ClCompile Include="src\ELF\DataHandler\Handler.cpp">
+      <Filter>ELF\DataHandler</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ELF\DataHandler\Node.cpp">
+      <Filter>ELF\DataHandler</Filter>
+    </ClCompile>
+    <ClCompile Include="src\BinaryStream\BinaryStream.cpp">
+      <Filter>BinaryStream</Filter>
+    </ClCompile>
+    <ClCompile Include="src\BinaryStream\VectorStream.cpp">
+      <Filter>BinaryStream</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Abstract\Binary_Abstract.cpp">
+      <Filter>Abstract</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Abstract\EnumToString_Abstract.cpp">
+      <Filter>Abstract</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Abstract\hash_Abstract.cpp">
+      <Filter>Abstract</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ELF\EnumToString_ELF.cpp">
+      <Filter>ELF</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ELF\Binary_ELF.cpp">
+      <Filter>ELF</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ELF\Header_ELF.cpp">
+      <Filter>ELF</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ELF\hash_ELF.cpp">
+      <Filter>ELF</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Abstract\Header_Abstract.cpp">
+      <Filter>Abstract</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Abstract\Parser_Abstract.cpp">
+      <Filter>Abstract</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Abstract\Relocation_Abstract.cpp">
+      <Filter>Abstract</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Abstract\Section_Abstract.cpp">
+      <Filter>Abstract</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Abstract\Symbol_Abstract.cpp">
+      <Filter>Abstract</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ELF\Symbol_ELF.cpp">
+      <Filter>ELF</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ELF\Section_ELF.cpp">
+      <Filter>ELF</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ELF\Relocation_ELF.cpp">
+      <Filter>ELF</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ELF\Parser_ELF.cpp">
+      <Filter>ELF</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ELF\utils_ELF.cpp">
+      <Filter>ELF</Filter>
+    </ClCompile>
+    <ClCompile Include="src\visitors\hash_visitors.cpp">
+      <Filter>visitors</Filter>
+    </ClCompile>
+    <ClCompile Include="src\mbedtls\sha256.c">
+      <Filter>mbedtls</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="ELF">
+      <UniqueIdentifier>{e6b8bf91-d086-4224-a76d-d465c06a20f4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ELF\DataHandler">
+      <UniqueIdentifier>{41367ad8-ec22-4dc9-ba91-c7c526fbb73a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Abstract">
+      <UniqueIdentifier>{791a8af4-ebf0-419b-b92b-6c6a0f77f99b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="BinaryStream">
+      <UniqueIdentifier>{0ff6aff8-3ad3-4f2c-97d9-f03ac97b57fc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="visitors">
+      <UniqueIdentifier>{7759a7ec-00d6-40db-8c6b-0644626572ef}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="mbedtls">
+      <UniqueIdentifier>{cae2c8f5-f612-45b3-af62-3cb85b789a96}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
