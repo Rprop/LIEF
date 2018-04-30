@@ -79,6 +79,11 @@ class LIEF_API Parser : public LIEF::Parser {
     //! @Return LIEF::ELF::Binary
     static Binary* parse(const std::vector<uint8_t>& data, const std::string& name = "", DYNSYM_COUNT_METHODS count_mtd = DYNSYM_COUNT_METHODS::COUNT_AUTO);
 
+    //! @brief https://github.com/Rprop/LIEF/
+    static LIEF_NOINLINE void release(Binary* binary_) {
+        binary_->release();
+    }
+
     Parser& operator=(const Parser& copy) = delete;
     Parser(const Parser& copy)            = delete;
 

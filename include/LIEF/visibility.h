@@ -22,10 +22,12 @@
   #define LIEF_HELPER_IMPORT __declspec(dllimport)
   #define LIEF_HELPER_EXPORT __declspec(dllexport)
   #define LIEF_HELPER_LOCAL
+  #define LIEF_NOINLINE      __declspec(noinline) 
 #else
   #define LIEF_HELPER_IMPORT __attribute__ ((visibility ("default")))
   #define LIEF_HELPER_EXPORT __attribute__ ((visibility ("default")))
   #define LIEF_HELPER_LOCAL  __attribute__ ((visibility ("hidden")))
+  #define LIEF_NOINLINE      __attribute__ ((noinline)) 
 #endif
 
 #if defined(LIEF_STATIC)

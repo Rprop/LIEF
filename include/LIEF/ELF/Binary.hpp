@@ -64,6 +64,11 @@ class LIEF_API Binary : public LIEF::Binary {
     Binary& operator=(const Binary& copy) = delete;
     Binary(const Binary& copy)            = delete;
 
+    //! @brief https://github.com/Rprop/LIEF/
+    LIEF_NOINLINE void release(void) {
+        delete this;
+    }
+
     //! @brief Return binary's class (ELF32 or ELF64)
     ELF_CLASS type(void) const;
 
