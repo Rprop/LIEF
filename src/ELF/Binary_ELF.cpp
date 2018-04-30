@@ -20,6 +20,7 @@
 
 #if defined(__unix__) || (defined(__APPLE__) && defined(__MACH__))
 #include <unistd.h>
+#define getpagesize() sysconf(_SC_PAGESIZE)
 #else
 #define getpagesize() 0x1000
 #endif
